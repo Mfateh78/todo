@@ -1,0 +1,25 @@
+
+<h3>Login page</h3>
+
+{% block content %}
+
+
+<div>
+    <form method="post" action="">
+        {% csrf_token %}
+        
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="enter username"/>
+
+        <label>password:</label>
+        <input type="text" name="password" placeholder="enter password"/>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <p>aren't sign up yet ?</p>
+    <a href="{% url 'register' %}">Sign up</a>
+</div>
+
+
+{% endblock content %}
